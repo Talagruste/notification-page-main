@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Very-light-grayish-blue: hsl(210, 60%, 98%);
+    --Light-grayish-blue-1: hsl(211, 68%, 94%);
+    --Light-grayish-blue-2: hsl(205, 33%, 90%);
+    --Grayish-blue: hsl(219, 14%, 63%);
+    --Dark-grayish-blue: hsl(219, 12%, 42%);
+    --Very-dark-blue: hsl(224, 21%, 14%);
+}
+
+* {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--Dark-grayish-blue);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--Very-light-grayish-blue);
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    background: var(--White);
+    width: 700px;
+    padding: 20px;
+    margin: 20px;
+    border: solid 1px var(--Grayish-blue);
+    border-radius: 1.5rem;
+    box-shadow: 5px 5px var(--Grayish-blue);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+#notificationBox {
+    display: flex;
+    align-items: center;
+}
+
+.notifTitle {
+    font-size: 1.8rem;
+    color: var(--Very-dark-blue);
+}
+
+#notifCount {
+    color: var(--White);
+    font-weight: 800;
+    background-color: var(--Blue);
+    width: 30px;
+    height: 30px;
+    margin-left: 0.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+#readAll:hover {
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.notifCard {
+    display: flex;
+    align-items: center;
+}
+
+.notifCard img {
+    width: 60px;
+}
+
+.userName {
+    color: var(--Very-dark-blue);
+}
+
+.userActivity {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activDescription a {
+    text-decoration: none;
+    font-weight: 800;
+}
+
+.activDescription a:hover {
+    color: var(--Blue);
+    cursor: pointer;
+}
+
+.unread p:first-of-type::after {
+    content: "";
+    background-color: var(--Red);
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+}
+
+.message {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border: solid 1px var(--Light-grayish-blue-2);
+    border-radius: 0.5rem;
+}
+
+.message:hover {
+    background-color: var(--Light-grayish-blue-1);
+    cursor: pointer;
+}
+
+.imgComment {
+    margin-left: auto;
+}
+
+/* Media Query */
+@media screen and (max-width:550px) {
+    #container {
+        margin: 0;
+        border: none;
+        box-shadow: none;
+    }
+}
