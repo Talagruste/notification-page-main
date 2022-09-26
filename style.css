@@ -135,7 +135,7 @@ main {
 }
 
 /* Media Query */
-@media screen and (max-width:550px) {
+@media screen and (max-width:768px) {
     #container {
         margin: 0;
         border: none;
